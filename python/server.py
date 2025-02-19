@@ -1,9 +1,7 @@
-from image_service import process_image
+from image_service_v2_0_1 import process_image
 import numpy as np
 import logging
-import matplotlib.pyplot as plt
 from flask import Flask, request, jsonify
-from io import BytesIO
 import os
 import matplotlib
 import json
