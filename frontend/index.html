@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Num9</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/custom-styles-new.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body id="top">
+    <main>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand-custom" href="index.html">
+                    <i class="bi-back"></i>
+                    <span>Num9</span>
+                </a>
+            </div>
+        </nav>
+
+        <section class="main-part align-items-center" id="section_1">
+
+            <div class="container">
+                <h1 class="slogan">FAKE IMAGE DETECTION</h1>
+                <div class="row">
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <form id="imageUploadForm" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                            <div class="upload-box" onclick="document.getElementById('imageInput').click()">
+                                <i class="bi bi-cloud-upload upload-icon"></i>
+                                <span class="upload-text">Drag and drop image here or click to upload</span>
+                                <input type="file" id="imageInput" name="image" accept="image/*"
+                                    onchange="uploadImage()">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-part align-items-center hidden" id="section_2">
+            <h1 class="slogan">FAKE IMAGE DETECTION</h1>
+            <div id="resultsContainer" class="results-container hidden">
+                <!-- Left side: images with captions -->
+                <div class="left-section">
+                    <div class="image-block">
+                        <img id="originalImage" src="" alt="Original Image">
+                    </div>
+                    <div class="image-block">
+                        <img id="processedImage" src="" alt="Processed Image">
+                        <p>FFT visualization</p>
+                    </div>
+                </div>
+
+                <!-- Right side: table -->
+                <div class="right-section">
+                    <table class="results-table">
+                        <tbody>
+                            <tr>
+                                <td>Mean Magnitude</td>
+                                <td id="meanMagnitude"></td>
+                            </tr>
+                            <tr>
+                                <td>Std Magnitude</td>
+                                <td id="stdMagnitude"></td>
+                            </tr>
+                            <tr>
+                                <td>Frequency Energy Ratio</td>
+                                <td id="freqEnergyRatio"></td>
+                            </tr>
+                            <tr>
+                                <td>Angular Symmetry</td>
+                                <td id="angularSymmetry"></td>
+                            </tr>
+                            <tr>
+                                <td>Frequency Entropy</td>
+                                <td id="freqEntropy"></td>
+                            </tr>
+                            <tr>
+                                <td>Periodicity Ratio</td>
+                                <td id="periodicityRatio"></td>
+                            </tr>
+                            <tr>
+                                <td>Laplacian Variance (Blur Measure)</td>
+                                <td id="laplacianVariance"></td>
+                            </tr>
+                            <tr>
+                                <td>DFT Analysis Decision</td>
+                                <td id="dftAnalysisDecision"></td>
+                            </tr>
+                            <tr>
+                                <td>Blur Analysis Decision</td>
+                                <td id="blurAnalysisDecision"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="overall-decision-table">
+                        <tbody>
+                            <tr>
+                                <td>Overall Decision</td>
+                                <td id="overallDecision"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/uploadImage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
