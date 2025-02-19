@@ -29,11 +29,4 @@
 
 1. decode base64 to image 	- https://base64.guru/converter/decode/image
 
-2. pretty view for json 	- https://jsonformatter.org/json-viewer
-
-
-#	Python server from frontend directory
-
-
-python -m http.server
-
+2. pretty view for json 	- https://jsonviewer.stack.hu/
